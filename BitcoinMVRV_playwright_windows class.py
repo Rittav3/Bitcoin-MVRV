@@ -228,7 +228,7 @@ class BitcoinMVRVProcessor:
         except Exception as e:
             print(f"Error deleting {self.savefile}: {e}")
     
-    async def run(self):
+    async def run_MVRV(self):
         """
         Execute the complete MVRV data download and processing workflow.
         
@@ -262,7 +262,7 @@ class BitcoinMVRVProcessor:
 if __name__ == "__main__":
     # Create processor instance and run the complete workflow
     processor = BitcoinMVRVProcessor()
-    asyncio.run(processor.run())
+    asyncio.run(processor.run_MVRV())
 
 
 
